@@ -1,4 +1,4 @@
-type AnimeListResponse = {
+export type AnimeListResponse = {
   data: {
     title_japanese: string;
     year: number;

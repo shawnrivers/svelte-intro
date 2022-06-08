@@ -1,17 +1,14 @@
 <!-- Asynchronicity & Data Fetching -->
 <script lang="ts">
-  import PageHeading from '../components/PageHeading.svelte';
-  import AnimeCard from '../components/AnimeCard.svelte';
-  import { fetchAnimeList } from '../api/fetchAnimeList';
+  import AnimeCard from '../../components/AnimeCard.svelte';
+  import { fetchAnimeList } from '../../api/fetchAnimeList';
 
   const fetchAnimeListPromise = fetchAnimeList();
 </script>
 
 <svelte:head>
-  <title>Anime | Svelte WTS</title>
+  <title>Anime (CSR) | Svelte WTS</title>
 </svelte:head>
-
-<PageHeading text="Anime" />
 
 {#await fetchAnimeListPromise}
   <p>Loading...</p>

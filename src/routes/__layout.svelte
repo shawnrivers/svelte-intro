@@ -9,7 +9,9 @@
     { text: 'Input', href: '/input' },
     { text: 'Login', href: '/login' },
     { text: 'Topics', href: '/topics' },
-    { text: 'Anime', href: '/anime' },
+    { text: 'Anime (CSR)', href: '/anime' },
+    { text: 'Anime (SSR)', href: '/anime/ssr' },
+    { text: 'Anime (SSG)', href: '/anime/ssg' },
   ];
 
   let currentPathname: string | null = null;
@@ -51,6 +53,7 @@
   header > .login-button-container {
     text-align: right;
     padding-inline-end: 1rem;
+    margin-block-end: 0.5rem;
   }
 
   a {
