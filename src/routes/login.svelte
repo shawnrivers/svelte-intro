@@ -1,4 +1,4 @@
-<!-- State binding -->
+<!-- Global State -->
 <script lang="ts">
   import PageHeading from '../components/PageHeading.svelte';
   import LoginButton from '../components/LoginButton.svelte';

@@ -11,8 +11,10 @@
 </svelte:head>
 
 {#await fetchAnimeListPromise}
+  <!-- promise is pending -->
   <p>Loading...</p>
 {:then animeList}
+  <!-- promise was fulfilled -->
   <ul>
     {#each animeList as anime (anime.title_japanese)}
       <li>
@@ -24,6 +26,7 @@
     {/each}
   </ul>
 {:catch error}
+  <!-- promise was rejected -->
   <p class="error">{error.message ?? 'Something went wrong'}</p>
 {/await}
 

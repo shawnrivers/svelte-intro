@@ -1,4 +1,4 @@
-<!-- State binding -->
+<!-- State Binding -->
 <script lang="ts">
   import PageHeading from '../components/PageHeading.svelte';
 

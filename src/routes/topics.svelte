@@ -4,8 +4,7 @@
 
   let isTopicListVisible = false;
 
-  type Topic = { id: number; text: string };
-  const topicList: Topic[] = [
+  const topicList: { id: number; text: string }[] = [
     { id: 1, text: 'The anatomy of a .svelte file' },
     { id: 2, text: 'State management' },
     { id: 3, text: 'Conditional & loop blocks' },
@@ -21,13 +20,13 @@
 
 <PageHeading text="Topic List" />
 
-{#if isTopicListVisible}
+{#if isTopicListVisible === true}
   <button on:click={() => (isTopicListVisible = false)}>Hide topic list</button>
 {:else}
   <button on:click={() => (isTopicListVisible = true)}>Show topic list</button>
 {/if}
 
-{#if isTopicListVisible}
+{#if isTopicListVisible === true}
   <ul>
     {#each topicList as topic (topic.id)}
       <li>{topic.text}</li>
