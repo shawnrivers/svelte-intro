@@ -1,17 +1,14 @@
 <script lang="ts">
-  import LoginButton from '../components/LoginButton.svelte';
   import { afterNavigate } from '$app/navigation';
-
-  type NavLink = { text: string; href: string };
-  const navLinks: NavLink[] = [
+  import LoginButton from '../components/LoginButton.svelte';
+  
+  const navLinks: { text: string; href: string }[] = [
     { text: 'Intro', href: '/' },
     { text: 'Counter', href: '/counter' },
     { text: 'Input', href: '/input' },
     { text: 'Login', href: '/login' },
     { text: 'Topics', href: '/topics' },
-    { text: 'Anime (CSR)', href: '/anime' },
-    { text: 'Anime (SSR)', href: '/anime/ssr' },
-    { text: 'Anime (SSG)', href: '/anime/ssg' },
+    { text: 'Anime', href: '/anime' },
   ];
 
   let currentPathname: string | null = null;

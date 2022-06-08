@@ -5,7 +5,7 @@
   let isTopicListVisible = false;
 
   const topicList: { id: number; text: string }[] = [
-    { id: 1, text: 'The anatomy of a .svelte file' },
+    { id: 1, text: 'Component' },
     { id: 2, text: 'State management' },
     { id: 3, text: 'Conditional & loop blocks' },
     { id: 4, text: 'Asynchronicity & data fetching' },
